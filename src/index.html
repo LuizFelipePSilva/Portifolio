@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio de Luiz Felipe - Desenvolvedor Full Stack e Back-End, especialista em TypeScript, Node.js e AWS."
+    />
+    <title>Portfólio - Luiz Felipe | Desenvolvedor Full Stack & Back-End</title>
+    <!-- Ícones via Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho com Navegação -->
+    <header role="banner">
+      <nav class="navbar">
+        <div class="container">
+          <h1 class="logo">Luiz Felipe</h1>
+          <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+          <ul class="nav-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre Mim</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#certificate">Certificado</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+      <!-- Seção de Apresentação -->
+      <section id="home" class="home-section">
+        <div class="home-content container">
+          <div class="intro">
+            <h1 id="home-heading">
+              Olá, sou <span class="highlight">Luiz Felipe</span>
+            </h1>
+            <p class="subtitle">
+              Desenvolvedor Full Stack e Back-End apaixonado por transformar
+              ideias em soluções inovadoras.
+            </p>
+            <div class="social-links">
+              <a
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/_luizfelipees/"
+              >
+                <i class="fab fa-instagram"></i> Instagram
+              </a>
+              <a
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/luizfelipepsilva"
+              >
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+              <a
+                class="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/LuizFelipePSilva"
+              >
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+          <figure class="illustration">
+            <img
+              src="/public/1743080781880.jpeg"
+              alt="Luiz Felipe - Desenvolvedor Full Stack e Back-End"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- Seção Sobre Mim -->
+      <section id="about" class="content">
+        <div class="container">
+          <h2>Sobre Mim</h2>
+          <article>
+            <p>
+              Sou um
+              <strong>Desenvolvedor Full Stack com foco em Back-End</strong> e
+              entusiasta da tecnologia. Transformo ideias em soluções reais
+              utilizando metodologias ágeis para garantir performance e
+              escalabilidade em ambientes de startup e projetos de médio porte.
+            </p>
+            <p>
+              Atualmente, desenvolvo um sistema inovador para gestão de
+              restaurantes, bares e cafeterias, promovendo autonomia para
+              empreendedores ao reduzir a dependência de grandes plataformas.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Seção Projetos -->
+      <section id="projects" class="content">
+        <div class="container">
+          <h2>Projetos Técnicos</h2>
+          <div class="project-list">
+            <!-- Projeto 1 -->
+            <article class="project">
+              <h3>
+                <a
+                  href="https://github.com/LuizFelipePSilva/SP_AWS_NODE_SET_2024_DESAFIO_3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  🏎️ Sistema de Gestão para Concessionária (Local → Cloud)
+                </a>
+              </h3>
+              <div class="project-details">
+                <div class="phase">
+                  <h4>Desenvolvimento Local</h4>
+                  <ul>
+                    <li>TypeScript + Node.js (v20) com Express</li>
+                    <li>Arquitetura: Clean Architecture e DDD</li>
+                    <li>Docker-compose com PostgreSQL e Redis</li>
+                    <li>Testes E2E com Jest e Supertest (85% de coverage)</li>
+                    <li>CI com GitHub Actions</li>
+                  </ul>
+                </div>
+                <div class="phase">
+                  <h4>Deploy na AWS</h4>
+                  <ul>
+                    <li>EC2 (t2.medium) com Auto Scaling Group</li>
+                  </ul>
+                </div>
+                <p class="impact">
+                  <strong>Resultados:</strong> Redução de 40% no tempo de
+                  resposta.
+                </p>
+              </div>
+            </article>
+
+            <!-- Projeto 2 -->
+            <!-- Projeto 2 -->
+            <article class="project">
+              <h3>
+                <a
+                  href="https://github.com/LuizFelipePSilva/gestao-restaurantes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  🍽️ Sistema de Gestão para Restaurantes e Cafeterias
+                </a>
+              </h3>
+              <div class="project-details">
+                <ul>
+                  <li>
+                    Projeto autoral em fase alpha, com foco em autonomia
+                    empresarial
+                  </li>
+                  <li>
+                    <strong>Stack:</strong>
+                    <ul class="nested-list">
+                      <li>Angular 19 no front-end</li>
+                      <li>Node.js + TypeScript com Clean Architecture</li>
+                      <li>PostgreSQL com cache em Redis</li>
+                      <li>Docker e CI/CD com GitHub Actions</li>
+                      <li>AWS (EC2, S3, Lambda)</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Módulos para controle de pedidos, pagamentos, reservas e
+                    relatórios.
+                  </li>
+                </ul>
+
+                <!-- Novo layout para exibição do notebook com celular sobreposto -->
+                <div class="device-mockup">
+                  <div class="device notebook">
+                    <img src="/public/pc.png" alt="Renderização em Notebook" />
+                    <div class="mobile-overlay">
+                      <img
+                        src="/public/mobile.png"
+                        alt="Renderização em Celular"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <p class="impact">
+                  <strong>Resultados:</strong> Aumento simulado de 30% na
+                  eficiência operacional.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Habilidades -->
+      <section id="skills" class="content">
+        <div class="container">
+          <h2>Habilidades Técnicas</h2>
+          <article>
+            <ul class="skills-list">
+              <li>TypeScript, JavaScript (ES6+)</li>
+              <li>Node.js e Express</li>
+              <li>Angular</li>
+              <li>PostgreSQL, MySQL, SQLite3 e Redis</li>
+              <li>Docker e Kubernetes</li>
+              <li>CI/CD com GitHub Actions</li>
+              <li>AWS (EC2, S3, Lambda, CloudWatch)</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Seção do Certificado -->
+      <section id="certificate" class="content">
+        <div class="container">
+          <h2>Certificado AWS CLF-C02</h2>
+          <div class="certificate-card">
+            <img src="/public/aws-clf-c02.png" alt="Certificado AWS CLF-C02" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Contato -->
+      <section id="contact" class="content">
+        <div class="container">
+          <h2>Contato</h2>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="name">Nome:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Seu nome completo"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="seuemail@exemplo.com"
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem:</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Escreva sua mensagem aqui"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar Mensagem</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+      <div class="container">
+        <p>
+          © 2025 Luiz Felipe Pereira da Silva. Todos os direitos reservados.
+        </p>
+        <div class="footer-social">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/_luizfelipees/"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/luizfelipepsilva"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/LuizFelipePSilva"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
