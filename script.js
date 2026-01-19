@@ -1,57 +1,93 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.getElementById("navbar");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
   const links = document.querySelectorAll(".nav-links a");
-  const sections = document.querySelectorAll("section");
 
-  // Adiciona rolagem suave ao clicar em qualquer link de navegação
+  // 1. Menu Mobile Toggle
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    // Troca ícone do menu
+    const icon = menuToggle.querySelector("i");
+    if (navLinks.classList.contains("active")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-times");
+    } else {
+      icon.classList.remove("fa-times");
+      icon.classList.add("fa-bars");
+    }
+  });
+
+  // 2. Fechar menu ao clicar em link
   links.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      // Obtém o id do alvo removendo o '#' do atributo href
-      const targetId = this.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
-        targetSection.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
-      // Se o menu estiver ativo (ex: em dispositivos móveis), fecha-o após o clique
-      document.querySelector(".nav-links").classList.remove("active");
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.remove("fa-times");
+      icon.classList.add("fa-bars");
     });
   });
 
-  // Função para destacar o link ativo conforme a rolagem
-  function highlightLink() {
-    let index = sections.length;
-    // Percorre os sections para encontrar qual está atualmente em vista
-    while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
-    links.forEach((link) => link.classList.remove("active"));
-    if (links[index]) {
-      links[index].classList.add("active");
-    }
-  }
-
-  highlightLink();
-  window.addEventListener("scroll", highlightLink);
-
-  // Adiciona ou remove a classe 'scrolled' conforme o scroll para, por exemplo, alterar o estilo da navbar
-  window.addEventListener("scroll", function () {
-    const navbar = document.getElementById("navbar");
+  // 3. Efeito Glassmorphism/Sombra na Navbar ao rolar
+  window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
+      navbar.style.boxShadow = "0 4px 6px -1px rgba(0,0,0,0.1)";
+      navbar.style.background = "rgba(255, 255, 255, 0.95)";
     } else {
-      navbar.classList.remove("scrolled");
+      navbar.style.boxShadow = "none";
+      navbar.style.background = "rgba(255, 255, 255, 0.9)";
     }
   });
 
-  // Menu toggle para dispositivos móveis
-  document.querySelector(".menu-toggle").addEventListener("click", function () {
-    document.querySelector(".nav-links").classList.toggle("active");
+  // 4. Scroll Reveal Animation (Observer API)
+  const revealElements = document.querySelectorAll(".scroll-reveal");
+
+  const revealOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  };
+
+  const revealOnScroll = new IntersectionObserver(function (entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, revealOptions);
+
+  revealElements.forEach((el) => {
+    revealOnScroll.observe(el);
   });
 
-  // Ajusta o espaçamento entre os itens de navegação
-  const navLinks = document.querySelectorAll(".nav-links a");
-  navLinks.forEach((link) => {
-    link.style.margin = "0 0.75rem"; // ajuste esse valor conforme sua necessidade
+  // 5. Active Link Highlight
+  const sections = document.querySelectorAll("section");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    const scrollY = window.scrollY;
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      // Ajuste de offset
+      if (scrollY >= sectionTop - 150) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    links.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active");
+      }
+    });
   });
 });
+
+// Função Global para Copiar Email
+function copyEmail() {
+  const emailText = "Luizfelipep.s@outlook.com.br";
+  navigator.clipboard.writeText(emailText).then(() => {
+    alert("Email copiado para a área de transferência!");
+  });
+}
