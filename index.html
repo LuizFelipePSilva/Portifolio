@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfólio de Luiz Felipe - Backend Software Engineer Júnior. Node.js, Java, APIs REST, Arquitetura de Software e Cloud."
+      content="Luiz Felipe — Backend Software Engineer. Node.js, NestJS, TypeScript, MQTT, IoT, PostgreSQL, Docker, AWS. Disponível para oportunidades backend."
     />
-    <title>Luiz Felipe | Backend Software Engineer Jr</title>
-
+    <title>Luiz Felipe | Backend Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,347 +23,512 @@
   <body>
     <header role="banner">
       <nav class="navbar" id="navbar">
-        <div class="container">
+        <div class="container nav-inner">
           <a href="#home" class="logo">Luiz Felipe<span class="dot">.</span></a>
-          <button class="menu-toggle" aria-label="Abrir menu">
-            <i class="fas fa-bars"></i>
-          </button>
-          <ul class="nav-links">
-            <li><a href="#home">Início</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#experience">Experiência</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#skills">Tech Stack</a></li>
-            <li><a href="#contact" class="btn-nav">Contato</a></li>
-          </ul>
+          <div class="nav-right">
+            <div class="lang-toggle">
+              <button
+                class="lang-btn active"
+                data-lang="pt"
+                aria-label="Português"
+              >
+                PT
+              </button>
+              <span class="lang-sep">|</span>
+              <button class="lang-btn" data-lang="en" aria-label="English">
+                EN
+              </button>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menu">
+              <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+              <li>
+                <a href="#about" data-pt="Sobre" data-en="About">Sobre</a>
+              </li>
+              <li>
+                <a href="#experience" data-pt="Experiência" data-en="Experience"
+                  >Experiência</a
+                >
+              </li>
+              <li>
+                <a href="#skills" data-pt="Stack" data-en="Stack">Stack</a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="btn-nav"
+                  data-pt="Contato"
+                  data-en="Contact"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
 
     <main>
+      <!-- HERO -->
       <section id="home" class="home-section scroll-reveal">
         <div class="container home-content">
           <div class="intro">
-            <span class="greeting">Olá, eu sou</span>
-            <h1 id="home-heading">Luiz Felipe</h1>
-            <p class="subtitle">
-              <strong>Backend Software Engineer Júnior</strong>
+            <span class="greeting" data-pt="Olá, eu sou" data-en="Hi, I'm"
+              >Olá, eu sou</span
+            >
+            <h1>Luiz Felipe</h1>
+            <p
+              class="subtitle"
+              data-pt="Backend Software Engineer Júnior"
+              data-en="Junior Backend Software Engineer"
+            >
+              Backend Software Engineer Júnior
             </p>
-            <p class="description">
-              Desenvolvedor backend em início de carreira, com experiência
-              prática na construção de <strong>APIs REST</strong>, modelagem de
-              dados e aplicação de boas práticas de arquitetura e código limpo.
+            <p
+              class="description"
+              data-pt="Desenvolvedor backend com experiência em APIs REST, ingestão de dados IoT em tempo real via MQTT e arquitetura modular. Aberto a oportunidades de desenvolvimento backend."
+              data-en="Backend developer with experience in REST APIs, real-time IoT data ingestion via MQTT, and modular architecture. Open to backend engineering opportunities."
+            >
+              Desenvolvedor backend com experiência em APIs REST, ingestão de
+              dados IoT em tempo real via MQTT e arquitetura modular. Aberto a
+              oportunidades de desenvolvimento backend.
             </p>
             <div class="social-links">
               <a
                 class="btn btn-primary"
-                target="_blank"
                 href="https://www.linkedin.com/in/luizfelipepsilva"
+                target="_blank"
               >
                 <i class="fab fa-linkedin"></i> LinkedIn
               </a>
               <a
                 class="btn btn-outline"
-                target="_blank"
                 href="https://github.com/LuizFelipePSIlva"
+                target="_blank"
               >
                 <i class="fab fa-github"></i> GitHub
               </a>
+              <a
+                class="btn btn-outline"
+                href="mailto:Luizfelipep.s@outlook.com.br"
+              >
+                <i class="fas fa-envelope"></i> Email
+              </a>
             </div>
           </div>
+
           <figure class="illustration">
             <div class="img-wrapper">
               <img src="eu.jpeg" alt="Foto de Luiz Felipe" />
+            </div>
+            <div class="open-badge">
+              <span class="badge-dot"></span>
+              <span data-pt="Disponível para trabalho" data-en="Open to work"
+                >Disponível para trabalho</span
+              >
             </div>
           </figure>
         </div>
       </section>
 
+      <!-- ABOUT -->
       <section id="about" class="content scroll-reveal">
         <div class="container">
           <div class="section-header">
-            <h2>Sobre Mim</h2>
+            <h2 data-pt="Sobre Mim" data-en="About Me">Sobre Mim</h2>
             <div class="line"></div>
           </div>
           <article class="about-text">
-            <p>
-              Graduando em <strong>Ciência da Computação</strong> pela UFERSA,
-              com foco em desenvolvimento backend e aprendizado contínuo em
-              engenharia de software.
+            <p
+              data-pt="Graduando em <strong>Ciência da Computação</strong> pela UFERSA (conclusão: dez/2027). Atuo com foco em backend, com experiência prática em <strong>Node.js (NestJS)</strong>, <strong>TypeScript</strong> e <strong>Java</strong>."
+              data-en="CS undergrad at <strong>UFERSA</strong> (graduating Dec 2027). Backend-focused with hands-on experience in <strong>Node.js (NestJS)</strong>, <strong>TypeScript</strong>, and <strong>Java</strong>."
+            >
+              Graduando em <strong>Ciência da Computação</strong> pela UFERSA
+              (conclusão: dez/2027). Atuo com foco em backend, com experiência
+              prática em <strong>Node.js (NestJS)</strong>,
+              <strong>TypeScript</strong> e <strong>Java</strong>.
             </p>
-            <p>
-              Possuo experiência prática com <strong>Node.js (NestJS)</strong> e
-              <strong>Java</strong>, atuando no desenvolvimento de APIs,
-              integração com bancos de dados e aplicação de conceitos como
-              <strong>Clean Architecture</strong>, <strong>SOLID</strong> e boas
-              práticas de versionamento e testes.
-            </p>
-            <p>
-              Busco oportunidades para evoluir tecnicamente, contribuir com
-              times de desenvolvimento e crescer profissionalmente em ambientes
-              que valorizem qualidade de código e aprendizado.
+            <p
+              data-pt="Atualmente atuando em projeto de P&D com ingestão de dados IoT em tempo real via <strong>MQTT</strong>, refatoração de sistemas legados e controle transacional em ambiente crítico de produção."
+              data-en="Currently working on an R&D project with real-time <strong>IoT data ingestion via MQTT</strong>, legacy system refactoring, and transactional control in a production-critical environment."
+            >
+              Atualmente atuando em projeto de P&D com ingestão de dados IoT em
+              tempo real via <strong>MQTT</strong>, refatoração de sistemas
+              legados e controle transacional em ambiente crítico de produção.
             </p>
           </article>
+
+          <div class="highlight-grid">
+            <div class="highlight-card">
+              <i class="fas fa-server"></i>
+              <strong>Backend</strong>
+              <span>Node.js · NestJS · TypeScript</span>
+            </div>
+            <div class="highlight-card">
+              <i class="fas fa-wifi"></i>
+              <strong data-pt="IoT & Tempo Real" data-en="IoT & Real-Time"
+                >IoT & Tempo Real</strong
+              >
+              <span>MQTT · Sensors · Streaming</span>
+            </div>
+            <div class="highlight-card">
+              <i class="fas fa-cloud"></i>
+              <strong>Cloud & Infra</strong>
+              <span>AWS · Docker · PostgreSQL</span>
+            </div>
+            <div class="highlight-card">
+              <i class="fas fa-certificate"></i>
+              <strong data-pt="Certificado AWS" data-en="AWS Certified"
+                >Certificado AWS</strong
+              >
+              <span>CLF-C02 · Feb 2025</span>
+            </div>
+          </div>
         </div>
       </section>
 
+      <!-- EXPERIENCE -->
       <section id="experience" class="content scroll-reveal">
         <div class="container">
           <div class="section-header">
-            <h2>Experiência Profissional</h2>
+            <h2
+              data-pt="Experiência Profissional"
+              data-en="Professional Experience"
+            >
+              Experiência Profissional
+            </h2>
             <div class="line"></div>
           </div>
 
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-dot"></div>
-              <div class="timeline-date">Set 2025 - Presente</div>
+              <div class="timeline-date">
+                <span data-pt="Set 2025 — Presente" data-en="Sep 2025 — Present"
+                  >Set 2025 — Presente</span
+                >
+                <span class="tl-current" data-pt="Atual" data-en="Current"
+                  >Atual</span
+                >
+              </div>
               <div class="timeline-content">
-                <h3>Backend Developer (Bolsista CNPq)</h3>
-                <span class="company">
-                  Plataforma Greenfy | Pesquisa & Desenvolvimento
-                </span>
-                <p>
-                  Atuação no desenvolvimento e evolução de uma plataforma de
-                  gestão voltada à piscicultura de precisão.
-                </p>
+                <h3
+                  data-pt="Backend Developer — Bolsista CNPq"
+                  data-en="Backend Developer — CNPq Research Grant"
+                >
+                  Backend Developer — Bolsista CNPq
+                </h3>
+                <span
+                  class="company"
+                  data-pt="CNPq / Plataforma Greenfy · Remoto"
+                  data-en="CNPq / Greenfy Platform · Remote"
+                  >CNPq / Plataforma Greenfy · Remoto</span
+                >
                 <ul>
-                  <li>
-                    Apoio na refatoração e migração de funcionalidades para
-                    <strong>Node.js (NestJS)</strong>.
+                  <li
+                    data-pt="Refatoração de código legado para arquitetura modular em <strong>NestJS</strong>"
+                    data-en="Refactored legacy codebase into modular <strong>NestJS</strong> architecture"
+                  >
+                    Refatoração de código legado para arquitetura modular em
+                    <strong>NestJS</strong>
                   </li>
-                  <li>
-                    Participação na implementação de regras de negócio e
-                    organização da API.
+                  <li
+                    data-pt="Pipeline de ingestão de dados IoT em tempo real via <strong>MQTT</strong> para sensores de piscicultura, com consistência transacional e integridade dos dados"
+                    data-en="Real-time IoT data ingestion pipeline via <strong>MQTT</strong> for aquaculture sensors, with transactional consistency and data integrity"
+                  >
+                    Pipeline de ingestão de dados IoT em tempo real via
+                    <strong>MQTT</strong> para sensores de piscicultura, com
+                    consistência transacional e integridade dos dados
                   </li>
-                  <li>
-                    Implementação de rotinas de segurança e validação de dados.
+                  <li
+                    data-pt="Aplicação de regras de negócio complexas com controle transacional em ambiente crítico"
+                    data-en="Enforced complex business rules with transactional control in a mission-critical environment"
+                  >
+                    Aplicação de regras de negócio complexas com controle
+                    transacional em ambiente crítico
                   </li>
-                  <li>
-                    Desenvolvimento de módulo de comunicação via
-                    <strong>MQTT</strong> para ingestão de dados de sensores
-                    IoT.
+                  <li
+                    data-pt="Padronização de ambientes com <strong>Docker</strong> para maior previsibilidade de deploy"
+                    data-en="Standardized environments with <strong>Docker</strong> for more predictable deployments"
+                  >
+                    Padronização de ambientes com <strong>Docker</strong> para
+                    maior previsibilidade de deploy
                   </li>
                 </ul>
+                <div class="tl-stack">
+                  <span>TypeScript</span><span>Node.js</span><span>NestJS</span
+                  ><span>MQTT</span><span>PostgreSQL</span><span>Docker</span>
+                </div>
               </div>
             </div>
 
             <div class="timeline-item">
               <div class="timeline-dot"></div>
-              <div class="timeline-date">Mar 2025 - Presente</div>
+              <div class="timeline-date">
+                <span data-pt="Mar 2025 — Presente" data-en="Mar 2025 — Present"
+                  >Mar 2025 — Presente</span
+                >
+                <span class="tl-current" data-pt="Atual" data-en="Current"
+                  >Atual</span
+                >
+              </div>
               <div class="timeline-content">
-                <h3>Software Engineer Júnior (Freelance)</h3>
-                <span class="company">Autônomo | Remoto</span>
-                <p>
-                  Desenvolvimento de sistemas web sob demanda, atuando
-                  principalmente no backend.
-                </p>
+                <h3
+                  data-pt="Software Engineer Júnior — Freelance"
+                  data-en="Junior Software Engineer — Freelance"
+                >
+                  Software Engineer Júnior — Freelance
+                </h3>
+                <span
+                  class="company"
+                  data-pt="Autônomo · Remoto"
+                  data-en="Self-employed · Remote"
+                  >Autônomo · Remoto</span
+                >
                 <ul>
-                  <li>
-                    Implementação de <strong>caching com Redis</strong> para
-                    melhoria de desempenho.
+                  <li
+                    data-pt="APIs REST na <strong>AWS</strong> com redução de 40% no tempo de resposta via cache com <strong>Redis</strong>"
+                    data-en="REST APIs on <strong>AWS</strong> with 40% response time reduction through <strong>Redis</strong> caching"
+                  >
+                    APIs REST na <strong>AWS</strong> com redução de 40% no
+                    tempo de resposta via cache com <strong>Redis</strong>
                   </li>
-                  <li>
-                    Criação de ambientes de desenvolvimento com
-                    <strong>Docker</strong>.
+                  <li
+                    data-pt="Arquitetura de containers <strong>Docker</strong> para deploys consistentes"
+                    data-en="<strong>Docker</strong> container architecture for consistent deployments"
+                  >
+                    Arquitetura de containers <strong>Docker</strong> para
+                    deploys consistentes
                   </li>
-                  <li>
-                    Desenvolvimento Full Stack com foco em APIs seguras e
-                    consistentes.
+                  <li
+                    data-pt="Desenvolvimento Full Stack com <strong>Angular</strong>, <strong>Node.js</strong> e <strong>TypeScript</strong>"
+                    data-en="Full Stack development with <strong>Angular</strong>, <strong>Node.js</strong>, and <strong>TypeScript</strong>"
+                  >
+                    Desenvolvimento Full Stack com <strong>Angular</strong>,
+                    <strong>Node.js</strong> e <strong>TypeScript</strong>
                   </li>
                 </ul>
+                <div class="tl-stack">
+                  <span>TypeScript</span><span>Node.js</span><span>Angular</span
+                  ><span>Redis</span><span>AWS</span><span>Docker</span>
+                </div>
               </div>
             </div>
 
             <div class="timeline-item">
               <div class="timeline-dot"></div>
-              <div class="timeline-date">Set 2024 - Fev 2025</div>
+              <div class="timeline-date">
+                <span
+                  data-pt="Set 2024 — Fev 2025"
+                  data-en="Sep 2024 — Feb 2025"
+                  >Set 2024 — Fev 2025</span
+                >
+              </div>
               <div class="timeline-content">
-                <h3>Estagiário de Backend</h3>
-                <span class="company">Compass UOL | Remoto</span>
-                <p>
-                  Estágio com foco em desenvolvimento backend e práticas ágeis.
-                </p>
+                <h3 data-pt="Estagiário de Backend" data-en="Backend Intern">
+                  Estagiário de Backend
+                </h3>
+                <span
+                  class="company"
+                  data-pt="Compass UOL · Remoto"
+                  data-en="Compass UOL · Remote"
+                  >Compass UOL · Remoto</span
+                >
                 <ul>
-                  <li>
-                    Desenvolvimento de APIs REST aplicando
-                    <strong>Clean Architecture</strong>.
+                  <li
+                    data-pt="APIs RESTful com <strong>Node.js / TypeScript</strong> seguindo <strong>Clean Architecture</strong> e <strong>DDD</strong>, melhorando manutenibilidade em 40%"
+                    data-en="RESTful APIs with <strong>Node.js / TypeScript</strong> following <strong>Clean Architecture</strong> and <strong>DDD</strong>, improving maintainability by 40%"
+                  >
+                    APIs RESTful com
+                    <strong>Node.js / TypeScript</strong> seguindo
+                    <strong>Clean Architecture</strong> e <strong>DDD</strong>,
+                    melhorando manutenibilidade em 40%
                   </li>
-                  <li>
-                    Apoio na configuração de pipelines de CI/CD com
-                    <strong>GitHub Actions</strong>.
+                  <li
+                    data-pt="Pipelines CI/CD com <strong>GitHub Actions</strong> para deploy automatizado em <strong>AWS EC2</strong> e testes com Jest"
+                    data-en="CI/CD pipelines with <strong>GitHub Actions</strong> for automated <strong>AWS EC2</strong> deploys and Jest testing"
+                  >
+                    Pipelines CI/CD com <strong>GitHub Actions</strong> para
+                    deploy automatizado em <strong>AWS EC2</strong> e testes com
+                    Jest
                   </li>
-                  <li>
-                    Escrita de testes unitários e de integração com Jest/JUnit.
+                  <li
+                    data-pt="Liderança de sistema de gestão de concessionárias atuando como <strong>Scrum Master</strong>"
+                    data-en="Led dealership management system development as <strong>Scrum Master</strong>"
+                  >
+                    Liderança de sistema de gestão de concessionárias atuando
+                    como <strong>Scrum Master</strong>
                   </li>
-                  <li>
-                    Participação em cerimônias ágeis e trabalho em equipe.
+                  <li
+                    data-pt="Containerização com <strong>Docker</strong> e gerenciamento de bancos <strong>PostgreSQL</strong> / <strong>MySQL</strong>"
+                    data-en="Containerization with <strong>Docker</strong>, managed <strong>PostgreSQL</strong> / <strong>MySQL</strong> databases"
+                  >
+                    Containerização com <strong>Docker</strong> e gerenciamento
+                    de bancos <strong>PostgreSQL</strong> /
+                    <strong>MySQL</strong>
                   </li>
                 </ul>
+                <div class="tl-stack">
+                  <span>TypeScript</span><span>Node.js</span><span>Jest</span
+                  ><span>GitHub Actions</span><span>AWS EC2</span
+                  ><span>PostgreSQL</span><span>Docker</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="content scroll-reveal">
-        <div class="container">
-          <div class="section-header">
-            <h2>Projetos Técnicos</h2>
-            <div class="line"></div>
-          </div>
-
-          <div class="project-list">
-            <article class="project-card">
-              <div class="card-header">
-                <i class="fas fa-server icon-project"></i>
-                <h3>SaborSync</h3>
-              </div>
-              <div class="card-body">
-                <p class="project-desc">
-                  Sistema para gerenciamento de pedidos e cardápios em tempo
-                  real, desenvolvido como projeto prático de backend.
-                </p>
-                <div class="tech-stack">
-                  <span>Node.js</span>
-                  <span>TypeScript</span>
-                  <span>Redis</span>
-                  <span>TypeORM</span>
-                  <span>PostgreSQL</span>
-                  <span>Angular</span>
-                  <span>Docker</span>
-                </div>
-                <ul class="details-list">
-                  <li>Modelagem de dados e criação de endpoints REST.</li>
-                  <li>Implementação de autenticação com JWT.</li>
-                </ul>
-                <div class="card-footer">
-                  <span class="impact">⚡ Projeto Backend</span>
-                  <a
-                    href="https://github.com/LuizFelipePSIlva"
-                    target="_blank"
-                    class="link-arrow"
-                  >
-                    Ver Código <i class="fas fa-code"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="card-header">
-                <i class="fas fa-layer-group icon-project"></i>
-                <h3>API de Gerenciamento de Concessionária</h3>
-              </div>
-              <div class="card-body">
-                <p class="project-desc">
-                  API backend desenvolvida para estudo de arquitetura e testes
-                  automatizados.
-                </p>
-                <div class="tech-stack">
-                  <span>TypeScript</span>
-                  <span>TypeORM</span>
-                  <span>AWS S3</span>
-                  <span>Jest</span>
-                </div>
-                <ul class="details-list">
-                  <li>Separação em camadas seguindo Clean Architecture.</li>
-                  <li>Testes automatizados e integração com CI/CD.</li>
-                  <li>Upload de arquivos utilizando AWS SDK.</li>
-                </ul>
-                <div class="card-footer">
-                  <span class="impact">🛠 Projeto de Estudo</span>
-                  <a
-                    href="https://github.com/LuizFelipePSilva/SP_AWS_NODE_SET_2024_DESAFIO_3"
-                    target="_blank"
-                    class="link-arrow"
-                  >
-                    Ver Código <i class="fas fa-code"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
+      <!-- SKILLS -->
       <section id="skills" class="content scroll-reveal">
         <div class="container">
           <div class="section-header">
-            <h2>Stack Tecnológica</h2>
+            <h2 data-pt="Stack Tecnológica" data-en="Tech Stack">
+              Stack Tecnológica
+            </h2>
             <div class="line"></div>
           </div>
 
           <div class="skills-category-wrapper">
             <div class="skill-group">
-              <h3>Backend</h3>
+              <h3 data-pt="Linguagens" data-en="Languages">Linguagens</h3>
               <ul class="skills-tags">
                 <li>TypeScript</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3
+                data-pt="Frameworks & Runtimes"
+                data-en="Frameworks & Runtimes"
+              >
+                Frameworks & Runtimes
+              </h3>
+              <ul class="skills-tags">
                 <li>Node.js</li>
                 <li>NestJS</li>
-                <li>Java</li>
-                <li>APIs REST</li>
+                <li>Angular</li>
+                <li>React</li>
               </ul>
             </div>
-
             <div class="skill-group">
-              <h3>Banco de Dados & Infra</h3>
+              <h3 data-pt="Protocolos & IoT" data-en="Protocols & IoT">
+                Protocolos & IoT
+              </h3>
               <ul class="skills-tags">
-                <li>PostgreSQL / MySQL</li>
-                <li>Redis / MongoDB</li>
+                <li>MQTT</li>
+                <li>REST APIs</li>
+                <li>IoT Sensors</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3 data-pt="Banco de Dados" data-en="Databases">
+                Banco de Dados
+              </h3>
+              <ul class="skills-tags">
+                <li>PostgreSQL</li>
+                <li>MySQL</li>
+                <li>MongoDB</li>
+                <li>Redis</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Cloud & Infra</h3>
+              <ul class="skills-tags">
                 <li>Docker</li>
-                <li>AWS (EC2, S3)</li>
+                <li>AWS EC2</li>
+                <li>AWS S3</li>
+                <li>GitHub Actions</li>
               </ul>
             </div>
-
             <div class="skill-group">
-              <h3>Conceitos</h3>
+              <h3 data-pt="Arquitetura" data-en="Architecture">Arquitetura</h3>
               <ul class="skills-tags">
-                <li>Git / GitHub</li>
-                <li>Testes Automatizados</li>
                 <li>Clean Architecture</li>
+                <li>DDD</li>
+                <li>SOLID</li>
                 <li>Scrum</li>
               </ul>
+            </div>
+          </div>
+
+          <div class="bottom-cards">
+            <div class="info-card">
+              <i class="fab fa-aws"></i>
+              <div>
+                <strong>AWS Cloud Practitioner (CLF-C02)</strong>
+                <span
+                  data-pt="Amazon Web Services · Fev 2025"
+                  data-en="Amazon Web Services · Feb 2025"
+                  >Amazon Web Services · Fev 2025</span
+                >
+              </div>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <strong
+                  data-pt="Ciência da Computação"
+                  data-en="Computer Science"
+                  >Ciência da Computação</strong
+                >
+                <span
+                  data-pt="UFERSA · Mai 2024 – Dez 2027"
+                  data-en="UFERSA · May 2024 – Dec 2027"
+                  >UFERSA · Mai 2024 – Dez 2027</span
+                >
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- CONTACT -->
       <section id="contact" class="content scroll-reveal">
         <div class="container">
           <div class="contact-box">
             <div class="section-header">
-              <h2>Contato</h2>
-              <p>Aberto a oportunidades como desenvolvedor backend júnior.</p>
+              <h2 data-pt="Contato" data-en="Contact">Contato</h2>
+              <div class="line"></div>
+              <p
+                data-pt="Aberto a oportunidades como desenvolvedor backend júnior."
+                data-en="Open to junior backend engineering opportunities."
+              >
+                Aberto a oportunidades como desenvolvedor backend júnior.
+              </p>
             </div>
-
             <form action="https://formspree.io/f/mockuplink" method="POST">
               <div class="form-group">
                 <input type="text" name="name" required placeholder=" " />
-                <label>Nome</label>
+                <label data-pt="Nome" data-en="Name">Nome</label>
               </div>
               <div class="form-group">
                 <input type="email" name="email" required placeholder=" " />
                 <label>E-mail</label>
               </div>
               <div class="form-group">
-                <textarea name="message" required placeholder=" "></textarea>
-                <label>Mensagem</label>
+                <textarea
+                  name="message"
+                  rows="4"
+                  required
+                  placeholder=" "
+                ></textarea>
+                <label data-pt="Mensagem" data-en="Message">Mensagem</label>
               </div>
               <button type="submit" class="btn btn-primary btn-block">
-                Enviar Mensagem
+                <span data-pt="Enviar Mensagem" data-en="Send Message"
+                  >Enviar Mensagem</span
+                >
+                <i class="fas fa-paper-plane"></i>
               </button>
             </form>
-
             <div class="contact-direct">
               <p>
-                <i class="fas fa-envelope"></i>
-                Luizfelipep.s@outlook.com.br
+                <i class="fas fa-envelope"></i> Luizfelipep.s@outlook.com.br
               </p>
-              <p>
-                <i class="fas fa-map-marker-alt"></i>
-                Mossoró - RN, Brasil
-              </p>
+              <p><i class="fas fa-map-marker-alt"></i> Mossoró — RN, Brasil</p>
             </div>
           </div>
         </div>
@@ -372,9 +536,21 @@
     </main>
 
     <footer>
-      <div class="container">
-        <div class="footer-content">
-          <p>© 2025 Luiz Felipe. Backend Software Engineer Júnior.</p>
+      <div class="container footer-inner">
+        <p>© 2025 Luiz Felipe · Backend Software Engineer</p>
+        <div class="footer-links">
+          <a
+            href="https://github.com/LuizFelipePSIlva"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/luizfelipepsilva"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
         </div>
       </div>
     </footer>
